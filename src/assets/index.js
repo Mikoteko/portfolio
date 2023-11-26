@@ -9,29 +9,34 @@ import close from "./close.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import zapier from "./tech/zapier.png";
+import java from "./tech/java.png";
+import python from "./tech/python.png";
+import sql from "./tech/sql.png";
+import hadoop from "./tech/hadoop.png";
 
-import fsoft from "./company/fsoft.png";
-import hahalolo from "./company/hahalolo.png";
-import appcore from "./company/appcore.png";
+import boucle from "./company/boucle.png";
+import cirkwi from "./company/cirkwi.png";
+import dataplayers from "./company/dataplayers.png";
+import dfc from "./company/dfc.png";
+import engie from "./company/engie.png";
+import tbs from "./company/tbs.png";
+import transiscope from "./company/transiscope.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 
-import portfolio from "./3d_portfolio.png";
-import crypto from "./crypto.png";
-import photo_app from "./photo_app.png";
+import barrechargement from "./projects/barre-chargement.png";
+import dashboard from "./projects/dashboard-transiscope.png";
+import docsemanticbus from "./projects/doc-semantic-bus.png";
+import prats from "./projects/prats-site.png";
+import semanticbus from "./projects/semantic-bus.png";
+import dfcproto from "./projects/dfc-prototype.png";
 
 export {
   logo,
@@ -44,24 +49,29 @@ export {
   close,
   css,
   docker,
-  figma,
   git,
   html,
   javascript,
   mongodb,
   nodejs,
-  reactjs,
-  redux,
-  tailwind,
-  typescript,
-  threejs,
+  hadoop,
+  java,
+  sql,
+  python,
+  zapier,
   carrent,
   jobit,
-  tripguide,
-  fsoft,
-  hahalolo,
-  appcore,
-  portfolio,
-  photo_app,
-  crypto
+  boucle,
+  engie,
+  cirkwi,
+  dataplayers,
+  dfc,
+  tbs,
+  transiscope,
+  barrechargement,
+  dashboard,
+  docsemanticbus,
+  prats,
+  semanticbus,
+  dfcproto,
 };

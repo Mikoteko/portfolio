@@ -36,16 +36,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_u82pxr5',
-        'template_XXXXX',
+        'service_3jhgbwv',
+        'template_rpskza8',
         {
           from_name: form.name,
           to_name: "Emilie",
           from_email: form.email,
-          to_email: "emilie.pacheco@orange.fr",
+          to_email: "emiliepacheco@yahoo.com",
           message: form.message,
         },
-        'Q7MmkAQeOBXl3GXXX'
+        'yroEdpnJW4w3qBNb6'
       )
       .then(
         () => {
@@ -62,7 +62,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          alert("Il y a eu un problème. Veuillez réessayer.");
         }
       );
   };
