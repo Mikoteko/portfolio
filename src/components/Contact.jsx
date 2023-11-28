@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -29,42 +28,49 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+    const apiKey = "dd4d2ac72c1a28e75b68085c4db2c5d1";
+    const apiSecret = "0649fb77a30fb5c26e1b3a5ba715edd9";
 
-    // Q7MmkAQeOBXl3Gzb2
-    // template_hl7mazf
-    // service_ehyhcyt
+    const encoded = ethereumjs.Buffer.Buffer.from(`${apiKey}:${apiSecret}`).toString('base64');
 
-    emailjs
-      .send(
-        'service_3jhgbwv',
-        'template_rpskza8',
-        {
-          from_name: form.name,
-          to_name: "Emilie",
-          from_email: form.email,
-          to_email: "emiliepacheco@yahoo.com",
-          message: form.message,
-        },
-        'yroEdpnJW4w3qBNb6'
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Merci ! Je reviendrais vers vous dès que possible.");
+    fetch('https://api.mailjet.com/v3.1/send',{
+      method : 'POST',
+      mode : 'no-cors',
+      headers : {
+        'Content-Type': 'application/json',
+        'Authorization': `Basic ${encoded}`,
+      },
+      body : {
+        "Messages":[
+          {
+            "From": {
+              "Email": "emiliepacheco@yahoo.com",
+              "Name": "Emilie Pacheco"
+            },
+            "To": [
+              {
+                "Email": "emilie.pacheco@orange.fr",
+                "Name": "Emilie Pacheco"
+              }
+            ],
+            "TemplateID": 5368748,
+            "TemplateLanguage": true,
+            "Subject": `Contact portfolio de ${form.firstname}`,
+            "Variables": {
+              "name": form.firstname,
+              "email" : form.email,
+              "message": form.message,
+            }
+          }
+        ]
+      }
+    })
+    .then(resp=>resp.json())
+    .then(data => {
+      console.log('data mailjet', data);
+    })
+    .catch(err => err)
 
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Il y a eu un problème. Veuillez réessayer.");
-        }
-      );
   };
 
   return (

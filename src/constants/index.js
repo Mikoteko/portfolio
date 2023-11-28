@@ -30,12 +30,20 @@ import {
   export const navLinks = [
     {
       id: "about",
-      title: "À propos",
+      title: "Présentation",
     },
     {
       id: "work",
       title: "Expériences professionnelles",
-    }
+    },
+    {
+      id: "project",
+      title: "Projets",
+    },
+    {
+      id: "contact",
+      title: "Contact",
+    },
   ];
   
   const services = [
@@ -97,7 +105,7 @@ import {
       title: "Data engineer en alternance",
       company_name: "Data Players",
       icon: dataplayers,
-      iconBg: "#383E56",
+      iconBg: "#f3f3f3",
       date: "Août 2022 ->",
       points: [
         "Interopérabilité de données : création de flux de traitement de données en utilisant le Bus Sémantique.",
@@ -115,11 +123,11 @@ import {
       title: "Web Developper en stage",
       company_name: "Data Food Consortium pour Data Players",
       icon: dfc,
-      iconBg: "#E6DEDD",
+      iconBg: "#f3f3f3",
       date: "Avril 2023 - Mai 2023",
       points: [
         "Amélioration du prototype graphiquement à partir d’une maquette Figma.",
-        "Résolution de bugs front et backend sur le prototype.",
+        "Résolution de bugs frontend et backend sur le prototype.",
         "Modification de l’ontologie en fonction des erreurs rencontrées.",
         "Préparation de contenu pour un webinaire.",
       ],
@@ -128,10 +136,10 @@ import {
       title: "Data engineer en stage",
       company_name: "Transiscope pour Data Players",
       icon: transiscope,
-      iconBg: "#383E56",
+      iconBg: "#f3f3f3",
       date: "Mai 2022 - Juin 2022",
       points: [
-        "Créer des flux de traitement de données pour les sources de données du projet (carte OSM, carte GoGoCarto, api JSON, fichiers statiques, google spreadsheets...",
+        "Créer des flux de traitement de données pour les sources de données du projet (carte OSM, carte GoGoCarto, api JSON, fichiers statiques, Google Spreadsheets...)",
         "Régler les problèmes présents sur les différents flux de traitement des données et uniformiser les traitements.",
         "Dashboard de vérification de l’état des sources de données mis en place, vérification de la taille et du type des réponses."
       ],
@@ -140,7 +148,7 @@ import {
       title: "Service civique dans la transition",
       company_name: "La Boucle, La Zone à Partager",
       icon: boucle,
-      iconBg: "#E6DEDD",
+      iconBg: "#f3f3f3",
       date: "Feb 2020 - Jul 2021",
       points: [
         "Aide à la mise en place d'un site web et à la création du café associatif d'un espace de coworking.",
@@ -151,18 +159,18 @@ import {
       title: "Web Developper en alternance",
       company_name: "Cirkwi",
       icon: cirkwi,
-      iconBg: "#383E56",
+      iconBg: "#f3f3f3",
       date: "Mars 2021 - Juin 2021",
       points: [
         "Résolution de bugs et développement de fonctionnalités pour un générateur de site de l'entreprise.",
-        "Générateur de site en php, utilisation du framework Symfony, de Git, de Javascript, CSS, HTML...",
+        "Générateur de site en PHP, utilisation du framework Symfony, de Git, de Javascript, CSS, HTML...",
       ],
     },
     {
       title: "Data analyst en alternance.",
       company_name: "Talent Business Solutions",
       icon: tbs,
-      iconBg: "#E6DEDD",
+      iconBg: "#f3f3f3",
       date: "Juillet 2020 - Février 2021",
       points: [
         "Conception de rapports Power BI pour des clients de l'entreprise.",
@@ -176,7 +184,7 @@ import {
       title: "Stagiaire en IOT",
       company_name: "Engie Cofely Luxembourg",
       icon: engie,
-      iconBg: "#383E56",
+      iconBg: "#f3f3f3",
       date: "Mai 2020 - Juin 2020",
       points: [
         "Modélisation des systèmes de chauffage et de ventilation d'un bâtiment industriel sous Niagara 4 avec un JACE 8000."
@@ -223,7 +231,7 @@ import {
     {
       name: "Documentation du Bus Sémantique",
       description:
-        "Mise en place d’une documentation pour le Bus Sémantique en utilisant Docusaurus et une pipeline CI/CD permettant de déployer automatiquement le site dès qu’une modification est faite depuis la branche main vers une branche gh-pages. Le site est disponible sur une github page. Des documents d’un wiki github d’un autre repository sont importés directement au sein de la pipeline et apparaissent sur le site.",
+        "Mise en place d’une documentation pour le Bus Sémantique en utilisant Docusaurus et une pipeline CI/CD permettant de déployer automatiquement le site dès qu’une modification est réalisée. Des documents sont importés depuis un autre dépôt Github.",
       tags: [
         {
           name: "Docusaurus",
@@ -240,7 +248,7 @@ import {
     {
       name: "Pipeline de données Prats ENR",
       description:
-        "Réception de fichiers FTP reçus par des webdyns (appareils permettant de récupérer les données provenant de panneaux solaires), traitement automatisée des fichiers grâce à un webhook, insertion en base InfluxDB, calculs sur les données et insertion dans une deuxième base InfluxDB. Monitoring des données grâce à Grafana.",
+        "Vous pouvez retrouver sur ce site, le monitoring des données provenant de panneaux solaires grâce à Grafana.",
       tags: [
         {
           name: "InfluxDB",
@@ -315,7 +323,7 @@ import {
     {
       name: "Dashboard de contrôle du Transiscope",
       description:
-        "Un outil permettant de vérifier en temps réel si différentes sources de données ont des problèmes ou non.",
+        "Un outil créé pour l'association Transiscope, permettant de vérifier en temps réel si différentes sources de données ont des problèmes ou non.",
       tags: [
         {
           name: "HTML",

@@ -23,3 +23,7 @@ The most impressive websites in the world use 3D graphics and animations to brin
 - Implement sending emails through a form on the website
 
 - Ensure responsiveness across all devices and improve your site's performance using Suspense and Preload.
+
+## TODO
+
+- Secure API keys
