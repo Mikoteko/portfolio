@@ -11,7 +11,7 @@ import {
     java,
     python,
     hadoop,
-    zapier,
+    langchain,
     boucle,
     cirkwi,
     dataplayers,
@@ -22,9 +22,11 @@ import {
     semanticbus,
     docsemanticbus,
     prats,
+    altays,
     dashboard,
     dfcproto,
-    barrechargement
+    barrechargement,
+    siaaltays
   } from "../assets";
   
   export const navLinks = [
@@ -54,6 +56,10 @@ import {
     {
       title: "Data engineer",
       icon: backend,
+    },
+    {
+      title: "AI engineer",
+      icon: web,
     }
   ];
   
@@ -95,12 +101,40 @@ import {
       icon: hadoop,
     },
     {
-      name: "Zapier",
-      icon: zapier,
-    },
+      name: "LangChain",
+      icon: langchain
+    }
   ];
   
   const experiences = [
+    {
+      title: "AI software engineer en CDD",
+      company_name: "Altays",
+      icon: altays,
+      iconBg: "#f3f3f3",
+      date: "Septembre 2024 - Décembre 2024",
+      points: [
+        "Création de 2 nouvelles fonctionnalités d’IA.",
+        "Maintien et amélioration du SIA existant et de ses fonctionnalités.",
+        "Formation d’un étudiant en alternance et travail de passation de connaissances."
+      ]
+    },
+    {
+      title: "AI software engineer en stage",
+      company_name: "Altays",
+      icon: altays,
+      iconBg: "#f3f3f3",
+      date: "Février 2024 - Août 2024",
+      points: [
+        "Création d’un Système d’IA (API REST en Python) en utilisant LangChain, LangSmith, OpenAI, Mistral AI, Groq...",
+        "Création d’une fonctionnalité d’IA intégrée dans le SIRH d'Altays.",
+        "Mise en place d'un environnement DevSecOps en utilisant Docker, des pipelines Gitlab et Poetry pour la gestion des packages Python.",
+        "Gestion de projet (organisation de réunions, création de roadmaps, organisation de talks sur l'IA...)",
+        "Travail de R&D important en amont pour déterminer la meilleure solution à mettre en place",
+        "Documentation du SIA",
+        "Suivi de l’AI Act et adaptation du SIA en conséquence."
+      ]
+    },
     {
       title: "Data engineer en alternance",
       company_name: "Data Players",
@@ -340,6 +374,51 @@ import {
       ],
       image: dashboard,
       source_code_link: "https://gitlab.com/transiscope/dashboard-transiscope",
+    },
+    {
+      name: "SIA Altays",
+      description:
+        "Un SIA permettant de générer du texte, synthétiser du contenu textuel et synthétiser des profils de candidats à des offres d'emploi. Code sur le dépôt Gitlab privé de l'entreprise.",
+      tags: [
+        {
+          name: "LangChain",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "LangSmith",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Python",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Poetry",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Docker",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Gitlab",
+          color: "green-text-gradient",
+        },
+        {
+          name: "SQLite",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "SQLAlchemy",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Bash",
+          color: "green-text-gradient",
+        },
+      ],
+      image: siaaltays,
+      source_code_link: "",
     },
   ];
   

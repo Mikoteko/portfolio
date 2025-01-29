@@ -14,7 +14,7 @@ import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
-import zapier from "./tech/zapier.png";
+import langchain from "./tech/langchain.png";
 import java from "./tech/java.png";
 import python from "./tech/python.png";
 import sql from "./tech/sql.png";
@@ -23,6 +23,7 @@ import hadoop from "./tech/hadoop.png";
 import boucle from "./company/boucle.png";
 import cirkwi from "./company/cirkwi.png";
 import dataplayers from "./company/dataplayers.png";
+import altays from "./company/altays.png"
 import dfc from "./company/dfc.png";
 import engie from "./company/engie.png";
 import tbs from "./company/tbs.png";
@@ -37,6 +38,7 @@ import docsemanticbus from "./projects/doc-semantic-bus.png";
 import prats from "./projects/prats-site.png";
 import semanticbus from "./projects/semantic-bus.png";
 import dfcproto from "./projects/dfc-prototype.png";
+import siaaltays from "./projects/altays.png"
 
 export {
   logo,
@@ -58,7 +60,7 @@ export {
   java,
   sql,
   python,
-  zapier,
+  langchain,
   carrent,
   jobit,
   boucle,
@@ -74,4 +76,6 @@ export {
   prats,
   semanticbus,
   dfcproto,
+  altays,
+  siaaltays
 };

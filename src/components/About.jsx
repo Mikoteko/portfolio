@@ -47,10 +47,10 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        Je suis une étudiante en alternance en dernière année à l&apos;ESIEA.<br />
-        Je devrais donc avoir un titre d&apos;ingénieure en informatique à l&apos;été 2024 😊<br />
-        Je travaille au sein de l&apos;entreprise Data Players dans le domaine
-        de l&apos;interopérabilité des données et du développement logiciel.
+        Je suis ingénieure en informatique et j&apos;ai récemment obtenu 
+        mon diplôme à l&apos; ESIEA 😊<br />
+        J&apos;ai dernièrement travaillé au sein de l&apos;entreprise Altays dans le domaine
+        de l&apos;IA et du développement logiciel.
         <br />
         <br />
         J&apos;adore apprendre et découvrir de nouvelles technologies.
