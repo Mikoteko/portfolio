@@ -1,4 +1,4 @@
-# Emilie Pacheco — Terminal Portfolio
+Terminal Portfolio
 
 A terminal-style, mobile-friendly CV/portfolio site.
 
