@@ -6,15 +6,8 @@ import Contact from "./commands/Contact";
 import Help from "./commands/Help";
 import History from "./commands/History";
 import ThemesOutput from "./commands/ThemesOutput";
+import UnknownCommand from "./commands/UnknownCommand";
 import { themeNames } from "./commandList";
-
-const UnknownCommand = ({ cmd }) => (
-  <p className="text-[var(--term-error)]">
-    command not found: {cmd}. type{" "}
-    <span className="text-[var(--term-accent)]">help</span> for a list of
-    commands.
-  </p>
-);
 
 export function runCommand(rawInput, ctx) {
   const trimmed = rawInput.trim();

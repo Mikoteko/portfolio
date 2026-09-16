@@ -1,29 +1,62 @@
-# Project: Fantastic 3D Portfolio Website (using ThreeJS)
+# Emilie Pacheco — Terminal Portfolio
 
-Website on -> https://mikoteko.github.io/portfolio/
+A terminal-style, mobile-friendly CV/portfolio site.
 
-ORIGINAL BY yennhi26 on Github 🌼 https://github.com/yennhi26/3d_portfolio
+Live at → https://mikoteko.github.io/portfolio/
 
-## Introduction
+Instead of a scrollable page, the site is a small in-browser terminal: type a
+command (or tap one of the quick-command chips on small screens) to reveal a
+section of the CV.
 
-The most impressive websites in the world use 3D graphics and animations to bring my content to life. 
+## Commands
+
+| Command                | Description                   |
+| ----------------------- | ------------------------------ |
+| `help`                  | list available commands        |
+| `about`                 | who is Emilie Pacheco (+ formation) |
+| `experience`            | professional experience        |
+| `projects`              | selected projects              |
+| `skills`                | technologies & tools           |
+| `contact`               | email, GitHub, LinkedIn        |
+| `history`               | show command history           |
+| `themes [name]`         | list or switch color themes (`green`, `amber`, `light`) |
+| `clear`                 | clear the terminal             |
+
+Arrow keys (↑/↓) recall command history, `Tab` autocompletes, and `Ctrl+L`
+clears the screen — same as a real shell.
 
 ## Tech stack
-- ThreeJS 
-- React Three Fiber
 
-- TailwindCSS 
-- Framer Motion
+- React 18 + Vite
+- Tailwind CSS
+- No backend — all CV content lives in `src/constants/index.js`
 
-## Features
-- Load, create and customize stunning 3D models and geometries with various lights, as well as understand the 3D world with a camera and positioning of an object in space.
+## Project structure
 
-- Make your code reusable and scalable using Higher Order Components (HOCs) and other industry-standard best practices
+```
+src/
+  constants/index.js   # all CV content (profile, education, experience, projects, skills, contact)
+  terminal/
+    Terminal.jsx        # root component: layout, theme state, scroll handling
+    useTerminal.js       # input state, history navigation, autocomplete
+    runCommand.jsx       # maps a typed command to its output component
+    commandList.js       # command registry (names + descriptions), drives `help`/autocomplete
+    commands/            # one component per command's output
+```
 
-- Implement sending emails through a form on the website
+To add a new command: add its `{ cmd, description }` to `commandList.js`,
+create a component under `commands/`, and wire it up in `runCommand.jsx`.
 
-- Ensure responsiveness across all devices and improve your site's performance using Suspense and Preload.
+## Development
 
-## TODO
+```bash
+npm install
+npm run dev      # start the dev server
+npm run lint     # eslint
+npm run build    # production build to dist/
+```
 
-- Secure API keys
+## Deployment
+
+Pushing to `master` triggers `.github/workflows/deploy.yaml`, which builds
+the site and publishes it to GitHub Pages.

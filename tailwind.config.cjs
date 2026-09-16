@@ -14,9 +14,6 @@ module.exports = {
           "monospace",
         ],
       },
-      screens: {
-        xs: "450px",
-      },
     },
   },
   plugins: [],

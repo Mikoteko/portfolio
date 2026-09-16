@@ -10,7 +10,7 @@ const ThemesOutput = ({ mode, theme, current, available }) => {
   if (mode === "invalid") {
     return (
       <p className="text-[var(--term-error)]">
-        unknown theme "{theme}". available: {available.join(", ")}
+        unknown theme &quot;{theme}&quot;. available: {available.join(", ")}
       </p>
     );
   }
