@@ -13,7 +13,7 @@ section of the CV.
 | Command                | Description                   |
 | ----------------------- | ------------------------------ |
 | `help`                  | list available commands        |
-| `about`                 | who is Emilie Pacheco (+ formation) |
+| `about`                 | who is Emilie Pacheco (+ formation, langues, centres d'intérêt) |
 | `experience`            | professional experience        |
 | `projects`              | selected projects              |
 | `skills`                | technologies & tools           |
@@ -35,7 +35,7 @@ clears the screen — same as a real shell.
 
 ```
 src/
-  constants/index.js   # all CV content (profile, education, experience, projects, skills, contact)
+  constants/index.js   # all CV content (profile, education, languages, interests, experience, projects, skills, contact)
   terminal/
     Terminal.jsx        # root component: layout, theme state, scroll handling
     useTerminal.js       # input state, history navigation, autocomplete
