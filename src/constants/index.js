@@ -2,25 +2,37 @@ export const profile = {
   name: "Emilie Pacheco",
   roles: ["AI engineer", "Data engineer"],
   location: "Strasbourg, Grand Est, France",
-  bio: "Ingénieure IA & Data chez ARTE. Je travaille sur des pipelines de données, de l'IA générative, des graphes de connaissances et l'évaluation des systèmes d'IA, avec un intérêt croissant pour l'impact environnemental des systèmes que je contribue à construire.",
+  bio: "Ingénieure IA & Data chez ARTE. Je construis des systèmes d'IA, des pipelines de données et des knowledge graphs : entrepôt de données et pipelines d'ingestion, génération de métadonnées par IA générative, recherche multimodale, transcription et traduction automatiques de sous-titres, évaluation des systèmes d'IA, avec un intérêt croissant pour l'impact environnemental des systèmes que je contribue à construire.",
 };
 
 export const education = [
   {
-    school: "ESIEA — École d'ingénieur·e·s d'un numérique utile",
+    school: "ESIEA — École d'ingénieur·e·s d'un numérique utile (Laval)",
     degree: "Diplôme d'ingénieur, Informatique",
     date: "2022 - 2024",
   },
   {
-    school: "Cnam",
+    school: "Cnam (Strasbourg)",
     degree: "Licence en alternance, Informatique générale",
     date: "2020 - 2021",
   },
   {
-    school: "IUT Robert Schuman",
+    school: "IUT Robert Schuman (Strasbourg)",
     degree: "DUT, Informatique",
     date: "2018 - 2020",
   },
+];
+
+export const languages = [
+  { name: "Français", level: "langue maternelle" },
+  { name: "Anglais", level: "C1" },
+  { name: "Allemand", level: "A2" },
+];
+
+export const interests = [
+  "Graphisme (illustration, gravure)",
+  "Céramique",
+  "Bénévolat",
 ];
 
 export const contact = {
@@ -30,79 +42,81 @@ export const contact = {
 };
 
 export const technologies = [
-  "HTML 5",
-  "CSS 3",
-  "JavaScript",
-  "Node JS",
-  "Java",
+  // Langages
   "Python",
-  "Git",
-  "Docker",
+  "TypeScript / JavaScript",
+  "SQL",
+  "Bash",
+  // IA / LLM
+  "LangChain / LangSmith",
+  "Langfuse",
+  "LiteLLM",
+  "Gemini / Vertex AI",
+  "OpenAI / Mistral AI",
+  "spaCy",
+  "Prompt & context engineering",
+  "Évaluation de systèmes d'IA (LLM-as-judge)",
+  "Agentic coding (Claude Code, Copilot)",
+  // Data
+  "PostgreSQL",
   "MongoDB",
-  "Hadoop",
-  "LangChain",
+  "InfluxDB",
+  "OpenSearch / Typesense",
+  "Memgraph / FalkorDB",
   "Kestra",
-  "Memgraph",
-  "FalkorDB",
+  "n8n",
+  "Grafana",
+  // Backend / Frontend
+  "FastAPI",
+  "Node.js",
+  "React / Next.js",
+  // Ops
+  "Docker",
+  "Kubernetes (Scaleway)",
+  "GitHub Actions / GitLab CI",
+  "Git",
+  "uv / Poetry",
 ];
 
 export const experiences = [
   {
-    title: "AI Engineer",
+    title: "AI & Data Engineer",
     company_name: "ARTE",
     date: "Septembre 2025 - Présent",
     points: [
-      "Data engineering : gestion des données dans l'entrepôt (amélioration de la qualité, complétude des données manquantes), génération de métadonnées par IA générative (texte ou vidéo vers texte).",
-      "Gestion et surveillance des pipelines d'ingestion Kestra, création et maintien d'une taxonomie pour les métadonnées.",
-      "Création et maintien d'une base de connaissances, explorations avec Memgraph et FalkorDB.",
-      "AI engineering : aide à la création et à la maintenance de SIA, context engineering, évaluation de nos systèmes d'IA.",
-      "Travail sur une application de recherche multimodale de contenu et sur la détection de sujets sensibles dans des vidéos, avec une plateforme de feedback sur les vidéos flaggées.",
-      "Analyse de l'impact environnemental de nos projets : récupération des données nécessaires et mise en place d'outils pour la collecte des données.",
+      "Data engineering : gestion de l'entrepôt de données Postgres (amélioration de la qualité et de la fiabilité, complétion des données manquantes via des API externes, dashboard de monitoring des données).",
+      "Génération de métadonnées par IA générative (texte ou vidéo vers texte) avec Gemini via LiteLLM, création et gestion d'une taxonomie versionnée pour ces métadonnées, prompts gérés dans Langfuse, évaluation LLM-as-judge des enrichissements.",
+      "Gestion et surveillance des pipelines d'ingestion Kestra (Mongo → Postgres → OpenSearch / Typesense), migrations de schéma, alerting Slack.",
+      "Création et maintien d'une base de connaissances : pipeline de reconnaissance d'entités nommées (spaCy + LLM + Wikidata) avec arbitrage multi-sources et revue humaine, explorations avec Memgraph et FalkorDB.",
+      "AI engineering : contribution à une application de recherche multimodale de contenu et à une application de transcription et de sous-titrage automatiques de programmes en 25 langues (pipeline agentique de traduction, évaluation multi-juges, migration de l'orchestration vers TaskIQ).",
+      "Context engineering et évaluation de nos systèmes d'IA : harnais d'évaluation de la recherche, règles métier de suggestions, dashboards de suivi des runs.",
+      "Détection automatique de sujets sensibles dans les programmes et plateforme de feedback pour les vidéos signalées (human-in-the-loop).",
+      "Analyse de l'impact environnemental de nos projets : collecte des données nécessaires et mise en place d'outils de collecte automatisée, en partenariat avec Hubblo.",
     ],
   },
   {
-    title: "AI Software Engineer",
+    title: "AI Engineer (stage puis CDD)",
     company_name: "Altays",
-    date: "Septembre 2024 - Décembre 2024",
+    date: "Février 2024 - Décembre 2024",
     points: [
-      "Création de 2 nouvelles fonctionnalités d'IA.",
-      "Maintien et amélioration du SIA existant et de ses fonctionnalités.",
-      "Formation d'un étudiant en alternance et travail de passation de connaissances.",
+      "AI engineering : création d'un système d'IA (API REST en Python) avec LangChain, LangSmith, OpenAI, Mistral AI et Groq.",
+      "Création de 3 fonctionnalités d'IA, dont une intégrée au SIRH (aide à la rédaction d'offres d'emploi, analyse de CV...).",
+      "Data engineering : mise en place d'un environnement DevSecOps avec Docker, des pipelines GitLab et Poetry pour la gestion des packages Python.",
+      "Gestion de projet : travail de R&D en amont pour déterminer la meilleure solution à mettre en place, organisation de réunions, création de roadmaps, organisation de talks sur l'IA, documentation du système d'IA.",
+      "Suivi de l'AI Act européen et adaptation du système d'IA en conséquence.",
+      "Formation d'un étudiant en alternance et passation de connaissances.",
     ],
   },
   {
-    title: "Stage en IA",
-    company_name: "Altays",
-    date: "Février 2024 - Août 2024",
-    points: [
-      "Création d'un Système d'IA (API REST en Python) en utilisant LangChain, LangSmith, OpenAI, Mistral AI, Groq...",
-      "Création d'une fonctionnalité d'IA intégrée dans le SIRH d'Altays.",
-      "Mise en place d'un environnement DevSecOps en utilisant Docker, des pipelines Gitlab et Poetry pour la gestion des packages Python.",
-      "Gestion de projet (organisation de réunions, création de roadmaps, organisation de talks sur l'IA...)",
-      "Travail de R&D important en amont pour déterminer la meilleure solution à mettre en place",
-      "Documentation du SIA",
-      "Suivi de l'AI Act et adaptation du SIA en conséquence.",
-    ],
-  },
-  {
-    title: "Apprentissage en traitement des données",
+    title: "Data Engineer (alternance)",
     company_name: "Data Players",
-    date: "Septembre 2022 - Février 2024",
+    date: "Juin 2022 - Février 2024",
     points: [
-      "Travail de traitement de données grâce au Bus Sémantique, un ETL/ESB open source : création de flux de traitement, amélioration de l'outil, résolution de bugs et création de composants (lecture/récupération/suppression de données depuis des buckets InfluxDB par exemple).",
-      "Travail sur le prototype du Data Food Consortium (DFC), axé sur le partage de catalogues produits entre plateformes du milieu de l'alimentation et la mutualisation de flux logistiques.",
-      "Création de graphiques pour suivre en temps réel la production d'électricité de panneaux solaires, en utilisant le Bus Sémantique, Grafana et InfluxDB.",
-      "Technologies utilisées : Express, RiotJS, NodeJS, Web Components, MongoDB, InfluxDB, Docker.",
-    ],
-  },
-  {
-    title: "Stage en data",
-    company_name: "Data Players",
-    date: "Juin 2022 - Juillet 2022",
-    points: [
-      "Travail sur le Transiscope (carte d'agrégation de données liées à la transition écologique et sociale) pour l'Assemblée Virtuelle.",
-      "Contact d'associations et de bénévoles disposant de données cartographiques, nettoyage des données et ajout sur une carte GoGoCarto.",
-      "Utilisation de Grappe.io (Bus Sémantique) et N8N pour le traitement des données, développement de micro-composants pour le Bus Sémantique.",
+      "Data engineering : traitement de données avec le Bus Sémantique, un ETL / ESB open source : création et maintien de flux de données. Express, RiotJS, NodeJS, MongoDB.",
+      "Création de dashboards temps réel pour suivre la production d'électricité de panneaux solaires avec le Bus Sémantique, Grafana et InfluxDB.",
+      "Software engineering : maintien et amélioration du Bus Sémantique, création de composants (lecture / récupération / suppression de données dans des buckets InfluxDB par exemple).",
+      "Développement sur le prototype du Data Food Consortium : partage de catalogues produits entre plateformes du milieu de l'alimentation.",
+      "Stage initial : travail sur le Transiscope (carte d'agrégation de données liées à la transition écologique et sociale), nettoyage de données cartographiques et ajout sur une carte GoGoCarto, traitement de données avec Grappe.io et N8N.",
     ],
   },
   {
@@ -110,7 +124,6 @@ export const experiences = [
     company_name: "Osons Ici et Maintenant",
     date: "Octobre 2021 - Avril 2022",
     points: [
-      "Service civique organisé dans le cadre du programme 100% Transition (INSUP / Osons Ici et Maintenant).",
       "Travail dans un tiers-lieu / espace de coworking : aide à la gestion du quotidien, organisation d'évènements, travail sur le site web.",
       "Travail dans une recyclerie : aide au tri et au rangement des dons, encaissement des clients, co-animation d'ateliers.",
     ],
@@ -120,8 +133,7 @@ export const experiences = [
     company_name: "Cirkwi",
     date: "Février 2021 - Juin 2021",
     points: [
-      "Développement du site de l'entreprise en PHP, utilisation du framework Symfony, de Git, JS, CSS.",
-      "Développement de nouvelles fonctionnalités et résolution de tickets.",
+      "Développement du site de l'entreprise en PHP (Symfony), Git, JS, CSS : nouvelles fonctionnalités et résolution de tickets.",
     ],
   },
   {
@@ -129,12 +141,11 @@ export const experiences = [
     company_name: "Talent Business Solutions",
     date: "Juillet 2020 - Janvier 2021",
     points: [
-      "Travail de recherche et développement sous Azure.",
-      "Modification de cubes de données, création et modification de rapports sous Power BI.",
+      "Recherche et développement sous Azure, modification de cubes de données, création et modification de rapports Power BI.",
     ],
   },
   {
-    title: "Stage en IOT",
+    title: "Stage en IoT",
     company_name: "ENGIE Cofely Luxembourg",
     date: "Avril 2020 - Juin 2020",
     points: [
@@ -143,11 +154,84 @@ export const experiences = [
   },
 ];
 
+const PRIVATE_REPO = "Code sur les dépôts privés de l'organisation ArteGEIE.";
+
 export const projects = [
+  {
+    name: "ARTE Translate — transcription & traduction de sous-titres par IA",
+    description:
+      "Plateforme interne de génération, traduction, relecture et évaluation qualité de sous-titres (25 langues). Backend FastAPI + PostgreSQL avec un pipeline agentique de traduction, mémoire de traduction, évaluation multi-juges (COMET) et prompts versionnés dans Langfuse ; frontend React. Contributions : migration de l'orchestration (Temporal → TaskIQ), intégration Langfuse, normalisation des retours d'évaluateurs, tests d'API Bruno en CI, glossaire d'entités nommées. " +
+      PRIVATE_REPO,
+    tags: ["Python", "FastAPI", "PostgreSQL", "React", "TypeScript", "Langfuse", "LLM", "Docker"],
+    source_code_link: "",
+  },
+  {
+    name: "ai-data — entrepôt & pipelines de données",
+    description:
+      "Ingestion et enrichissement du catalogue ARTE : pipelines Kestra (Mongo → Postgres → OpenSearch / Typesense), génération de métadonnées par Gemini, taxonomie versionnée, embeddings, évaluation LLM-as-judge, détection de sujets sensibles avec outillage éditorial, base de connaissances d'entités nommées (spaCy + LLM + Wikidata, arbitrage et revue humaine), dashboard de qualité des données. " +
+      PRIVATE_REPO,
+    tags: ["Python", "Kestra", "PostgreSQL", "MongoDB", "OpenSearch", "Gemini", "LiteLLM", "Langfuse", "spaCy", "Docker"],
+    source_code_link: "",
+  },
+  {
+    name: "ai-platform — applications France 2030 (IRIS, SMASH, dashboard, éditeur de métadonnées)",
+    description:
+      "Applications métier reposant sur l'entrepôt ai-data : recherche catalogue, exploration cartographique, dashboards de données et éditeur de métadonnées. Contributions : pages de couverture des données, badge de sensibilité éditoriale, page de revue des entités nommées, page de suivi des expérimentations NER, déploiement CI automatisé sur Kubernetes. " +
+      PRIVATE_REPO,
+    tags: ["TypeScript", "Next.js", "React", "Hono", "PostgreSQL", "Kubernetes"],
+    source_code_link: "",
+  },
+  {
+    name: "IRIS — assistant de recherche catalogue",
+    description:
+      "Assistant de recherche authentifié pour le catalogue ARTE : recherche structurée, outils SQL en lecture seule, workflows d'évaluation, rendu riche des résultats, génération et embeddings via Vertex AI. " +
+      PRIVATE_REPO,
+    tags: ["TypeScript", "Next.js", "PostgreSQL", "Vertex AI"],
+    source_code_link: "",
+  },
+  {
+    name: "AI Search Platform — moteur de recherche IA mutualisé",
+    description:
+      "Plateforme de recherche IA partagée entre les produits ARTE, remplaçant les recherches par mots-clés en silo : API de recherche FastAPI, playground interne et framework d'évaluation. Contributions : règles métier de suggestions avec observabilité (rule trace), intégration des règles dans le harnais d'évaluation, dashboards de runs. " +
+      PRIVATE_REPO,
+    tags: ["Python", "FastAPI", "Next.js", "Typesense", "Redis", "Langfuse"],
+    source_code_link: "",
+  },
+  {
+    name: "ai-graph — knowledge graph ARTE",
+    description:
+      "Graphe de connaissances pour la compréhension d'intention et la recherche sémantique (GraphRAG) : ontologie et taxonomie (ADR), pipeline NER (spaCy multi-langues → raffinement LLM → Wikidata) alimentant Memgraph, stack de prototypage (Memgraph, Postgres, Redis, Jupyter). " +
+      PRIVATE_REPO,
+    tags: ["Python", "Memgraph", "Cypher", "spaCy", "LLM", "Docker"],
+    source_code_link: "",
+  },
+  {
+    name: "Ranking d'illustrabilité de frames vidéo",
+    description:
+      "Expérimentations pour proposer aux éditeurs une shortlist de frames par plan : extraction, segmentation en plans (PySceneDetect), métriques techniques, score esthétique appris (CLIP-aesthetic), dédup par embeddings, pipeline visages, évaluation LLM et UI d'évaluation, traçage Langfuse, serveur GPU dédié. " +
+      PRIVATE_REPO,
+    tags: ["Python", "CLIP", "PySceneDetect", "Langfuse", "Docker", "GPU"],
+    source_code_link: "",
+  },
+  {
+    name: "ARTE Trivia Quest — jeu de quiz d'équipe (hackdays)",
+    description:
+      "Quiz d'équipe façon Trivial Pursuit pour ~25 personnes : les équipes répondent sur leurs téléphones, l'écran animateur est projeté. API + WebSocket + front dans un seul conteneur, pipeline de génération de questions, mascottes et animations de combat. " +
+      PRIVATE_REPO,
+    tags: ["Python", "FastAPI", "WebSocket", "React", "Docker"],
+    source_code_link: "",
+  },
+  {
+    name: "SIA Altays",
+    description:
+      "Un système d'IA permettant de générer du texte, synthétiser du contenu textuel et synthétiser des profils de candidats à des offres d'emploi. Code sur le dépôt GitLab privé de l'entreprise.",
+    tags: ["LangChain", "LangSmith", "Python", "Poetry", "Docker", "GitLab", "SQLite", "SQLAlchemy", "Bash"],
+    source_code_link: "",
+  },
   {
     name: "Le Bus Sémantique",
     description:
-      "Un outil open source permettant d'intéropérer des données hétérogènes techniquement et sémantiquement, facilement. (Un N8N ou Zapier open source !)",
+      "Un outil open source permettant d'interopérer des données hétérogènes techniquement et sémantiquement, facilement. (Un N8N ou Zapier open source !)",
     tags: ["nodeJS", "javascript", "riotJS", "Docker", "MongoDB", "scripts bash"],
     source_code_link: "https://github.com/assemblee-virtuelle/Semantic-Bus",
   },
@@ -185,12 +269,5 @@ export const projects = [
       "Un outil créé pour l'association Transiscope, permettant de vérifier en temps réel si différentes sources de données ont des problèmes ou non.",
     tags: ["HTML", "CSS", "Javascript"],
     source_code_link: "https://gitlab.com/transiscope/dashboard-transiscope",
-  },
-  {
-    name: "SIA Altays",
-    description:
-      "Un SIA permettant de générer du texte, synthétiser du contenu textuel et synthétiser des profils de candidats à des offres d'emploi. Code sur le dépôt Gitlab privé de l'entreprise.",
-    tags: ["LangChain", "LangSmith", "Python", "Poetry", "Docker", "Gitlab", "SQLite", "SQLAlchemy", "Bash"],
-    source_code_link: "",
   },
 ];
